@@ -1,0 +1,14 @@
+packages/
+
+built/
+docs/
+scripts/
+conf/
+out-tsc/
+
+.github/
+.settings/
+.vscode/
+package-lock.json
+yarn.lock
+CONTRIBUTING.md

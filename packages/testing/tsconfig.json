@@ -1,0 +1,14 @@
+{
+    "extends": "../../conf/tsconfig.base.json",
+    "compilerOptions": {
+        "sourceMap": true,
+        "outDir": "./out-tsc",
+        "baseUrl": ".",
+        "paths": {
+            "@testing/*": ["./src/*"]
+        },
+        "types": ["jasmine"]
+    },
+    "include": ["**/*.ts"],
+    "exclude": ["node_modules", "**/*.d.ts"]
+}

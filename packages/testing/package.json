@@ -1,0 +1,24 @@
+{
+    "name": "@auturge/testing",
+    "version": "0.0.0-PLACEHOLDER",
+    "description": "Auturge - the testing library",
+    "main": "./bundles/testing.umd.js",
+    "commonjs": "./common/testing.js",
+    "es6": "./es6/testing.js",
+    "typings": "./testing.d.ts",
+    "author": "auturge",
+    "license": "MIT",
+    "dependencies": {},
+    "peerDependencies": {},
+    "devDependencies": {
+        "@types/jasmine": "3.4.0"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/auturge/auturge.git"
+    },
+    "scripts": {
+        "test": "karma start ./karma.conf.js"
+    },
+    "sideEffects": false
+}
