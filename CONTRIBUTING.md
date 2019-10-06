@@ -26,20 +26,13 @@ Do not open issues for general support questions as we want to keep GitHub issue
 
 ## Reporting Bugs
 
-If you find a bug in the source code, you can help us by
-[submitting an issue](#markdown-header-submitting-an-issue) to our [GitHub Repository][github]. Even better, you can
-[submit a Pull Request](#markdown-header-submitting-a-pull-request) with a fix.
+If you find a bug in the source code, you can help us by [submitting an issue](#markdown-header-submitting-an-issue) to our [GitHub Repository][github]. Even better, you can [submit a Pull Request](#markdown-header-submitting-a-pull-request) with a fix.
 
 ## Missing Features
 
-You can *request* a new feature by [submitting an issue](#markdown-header-submitting-an-issue) to our GitHub
-Repository. If you would like to *implement* a new feature, please submit an issue with
-a proposal for your work first, to be sure that we can use it.
-Please consider what kind of change it is:
+You can *request* a new feature by [submitting an issue](#markdown-header-submitting-an-issue) to our GitHub Repository. If you would like to *implement* a new feature, please submit an issue with a proposal for your work first, to be sure that we can use it. Please consider what kind of change it is:
 
-- For a **Major Feature**, first open an issue and outline your proposal so that it can be
-discussed. This will also allow us to better coordinate our efforts, prevent duplication of work,
-and help you to craft the change so that it is successfully accepted into the project.
+- For a **Major Feature**, first open an issue and outline your proposal so that it can be discussed. This will also allow us to better coordinate our efforts, prevent duplication of work, and help you to craft the change so that it is successfully accepted into the project.
 - **Small Features** can be crafted and directly [submitted as a Pull Request](#markdown-header-submitting-a-pull-request).
 
 <hr>
@@ -68,8 +61,7 @@ You can file new issues by filling out our [new issue form](https://github.com/a
 
 Before you submit your Pull Request (PR) consider the following guidelines:
 
-1. Search [GitHub](https://github.com/auturge/auturge/pulls/) for an open or closed PR
-  that relates to your submission. You don't want to duplicate effort.
+1. Search [GitHub](https://github.com/auturge/auturge/pulls/) for an open or closed PR that relates to your submission. You don't want to duplicate effort.
 1. Fork the auturge/auturge repo.
 1. Make your changes in a new git branch:
 
@@ -79,8 +71,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 1. Create your patch, **including appropriate test cases**.
 1. Follow our [Coding Rules](#markdown-header-coding-rules).
-1. Run the full Auturge test suite, as described in the [developer documentation][dev-doc],
-  and ensure that all tests pass.
+1. Run the full Auturge test suite, as described in the [developer documentation][dev-doc], and ensure that all tests pass.
 1. Commit your changes using a descriptive commit message.
 
      ```shell
@@ -110,8 +101,7 @@ That's it! Thank you for your contribution!
 
 #### After your pull request is merged
 
-After your pull request is merged, you can safely delete your branch and pull the changes
-from the main (upstream) repository:
+After your pull request is merged, you can safely delete your branch and pull the changes from the main (upstream) repository:
 
 - Delete the remote branch on GitHub either through the GitHub web UI or your local shell as follows:
 
@@ -145,7 +135,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 
 - All features or bug fixes **must be tested** by one or more specs (unit tests).
 - All public API methods **must be documented**. (Details TBC).
-- An automated formatter is available, see [DEVELOPER.md](docs/DEVELOPER.md#clang-format).
+<!-- - An automated formatter is available, see [DEVELOPER.md](docs/DEVELOPER.md#clang-format). -->
 
 <hr>
 
