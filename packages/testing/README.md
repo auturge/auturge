@@ -2,9 +2,10 @@
 
 > Auturge/testing is a set of helpful Typescript functions for (Unit) testing.
 
-[![License][license-image]][license-url]
+[![License][license-image]][license-url] [![NPM Version][npm-image]][npm-url] [![Build][travis-image]][travis-url]
 
 - [auturge/testing](#auturgetesting)
+  - [Installation](#installation)
   - [AnyRandom](#anyrandom)
       - [Boolean](#boolean)
       - [Date](#date)
@@ -19,6 +20,12 @@
       - [Character Array](#character-array)
       - [String](#string)
   - [License](#license)
+
+## Installation
+
+> ```shell
+> $ npm install @auturge/testing
+> ```
 
 ## AnyRandom
 
@@ -35,7 +42,7 @@ NOTE that some methods include one or more alias methods. These methods provide 
 
 Returns a random boolean (`true` or `false`).
 
- ---
+---
 
 #### Date
 
@@ -45,7 +52,7 @@ Returns a random boolean (`true` or `false`).
 
 Returns a random date within the range defined by the `earliest` and `latest` dates.
 
- ---
+---
 
 #### Sign
 
@@ -291,10 +298,12 @@ Returns a random string, between `minLength` and `maxLength` characters long, wh
 
 ## License
 
-Distributed under the MIT license.  See [`LICENSE`][license] for more information.
+Distributed under the MIT license. See [`LICENSE`][license] for more information.
 
 [license]: LICENSE
-
 [license-image]: http://img.shields.io/:license-mit-blue.svg?style=flat-square
-
 [license-url]: http://badges.mit-license.org
+[npm-image]: https://img.shields.io/npm/v/@auturge/testing.svg
+[npm-url]: https://www.npmjs.com/package/@auturge/testing
+[travis-image]: https://img.shields.io/travis/auturge/testing/master.svg
+[travis-url]: https://travis-ci.org/auturge/testing

@@ -26,7 +26,6 @@ module.exports = function(config) {
 
         plugins: [
             "karma-typescript",
-            // "karma-coverage",
             "karma-chrome-launcher",
             "karma-jasmine",
             "karma-spec-reporter",
