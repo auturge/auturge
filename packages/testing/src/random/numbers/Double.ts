@@ -1,6 +1,6 @@
-import { RandomScaledNumber } from "@testing/random/numbers/RandomScaledNumber";
-import { Scale } from "@testing/random/numbers/Scale";
-import { Sign } from "@testing/random/numbers/Sign";
+import { RandomScaledNumber } from "./RandomScaledNumber";
+import { Scale } from "./Scale";
+import { Sign } from "./Sign";
 
 export class Double extends RandomScaledNumber {
     protected next(minValue: number, maxValue: number, scale: Scale): number {

@@ -1,40 +1,84 @@
-import { AnyRandomImplementation } from "./AnyRandomImplementation";
-import { RandomObjectGenerator } from "./RandomObjectGenerator";
-import { CharacterSet } from "./strings/CharacterSets";
-import { Scale } from "./numbers/Scale";
+/**
+ * @license Auturge v0.0.3
+ * (c) 2019 Auturge https://github.com/auturge/
+ * License: MIT
+ */
 
-export class AnyRandom {
-    private static random: RandomObjectGenerator = new AnyRandomImplementation();
+export declare enum CharacterSet {
+    /** Upper- and lower-case English letters. */
+    ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
 
+    /** The numbers 0 through 9. */
+    NUMERIC = "0123456789",
+
+    /** Upper- and lower-case English letters, and the numbers 0 through 9. */
+    ALPHANUMERIC = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789",
+
+    /**
+     * The following characters:
+     * ! # $ % & ' * + - / = ? ^ _ ` { | } ~
+     */
+    SYMBOLS = "!#$%&'*+-/=?^_`{|}~",
+
+    /**
+     * Concatenation of the `ALPHANUMERIC` and `SYMBOLS` character sets.
+     */
+    ATOM = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&'*+-/=?^_`{|}~"
+}
+
+/**
+ * @summary
+ * For data types that hold large values (e.g., double data type holds values up
+ * to 10^308), it is extremely unlikely that any Double chosen at random will
+ * have a magnitude smaller than 10 ^ "huge". This class gives a few options for
+ * generating random Doubles at different scales.
+ */
+export declare enum Scale {
+    /** The trivial non-scale. */
+    Unscaled,
+
+    /** The normal scale, where most values will have large magnitude. */
+    Flat,
+
+    /**
+     * A scale where values span the entire range, but spike exponentially around
+     * 0. This will generate numbers much closer to zero. For data types that hold
+     * large values, this is much more likely than the Flat scale to generate
+     * numbers that humans are 'familiar' with.
+     */
+    Exponential
+}
+
+export declare class AnyRandom {
+    /**
+     * @returns a random `Date` between 01-JAN-1970 and today.
+     */
     static date(): Date;
 
+    /**
+     * @returns a random `Date` between two dates.
+     */
     static date(earliest: Date, latest: Date): Date;
 
-    static date(earliest?: Date, latest?: Date): Date {
-        return this.random.date(earliest, latest);
-    }
+    /**
+     * @returns a random boolean value (`true` or `false`).
+     */
+    static bool(): boolean;
 
     /**
      * @returns a random boolean value (`true` or `false`).
      */
-    static bool(): boolean {
-        return this.random.boolean();
-    }
+    static boolean(): boolean;
 
     /**
-     * @returns a random boolean value (`true` or `false`).
+     * @returns a random `sign`, indicating whether a number is positive or negative.
      */
-    static boolean(): boolean {
-        return this.random.boolean();
-    }
-
     static sign(): number;
-    static sign(includeZero: boolean): number;
-    static sign(includeZero?: boolean): number {
-        return this.random.sign(includeZero);
-    }
 
-    /** 8-bit integers */
+    /**
+     * @returns a random `sign`, indicating whether a number is positive, negative, or zero (when `includeZero` is `true`).
+     */
+    static sign(includeZero: boolean): number;
 
     /**
      * Returns a random unsigned `Byte` (8-bit integer) on the interval [0, 255].
@@ -50,9 +94,6 @@ export class AnyRandom {
      * @see byte
      * */
     static uint8(minValue: number, maxValue: number): number;
-    static uint8(minValue?: number, maxValue?: number): number {
-        return this.random.uint8(minValue, maxValue);
-    }
 
     /**
      * Returns a random unsigned `Byte` (8-bit integer) on the interval [0, 255].
@@ -68,9 +109,6 @@ export class AnyRandom {
      * @see uint8
      */
     static byte(minValue: number, maxValue: number): number;
-    static byte(minValue?: number, maxValue?: number): number {
-        return this.uint8(minValue, maxValue);
-    }
 
     /**
      * Returns a random signed `Byte` (8-bit integer) on the interval [-128, 127].
@@ -86,9 +124,6 @@ export class AnyRandom {
      * @see sbyte
      */
     static int8(minValue: number, maxValue: number): number;
-    static int8(minValue?: number, maxValue?: number): number {
-        return this.random.int8(minValue, maxValue);
-    }
 
     /**
      * Returns a random signed `Byte` (8-bit integer) on the interval [-128, 127].
@@ -104,11 +139,6 @@ export class AnyRandom {
      * @see int8
      */
     static sbyte(minValue: number, maxValue: number): number;
-    static sbyte(minValue?: number, maxValue?: number): number {
-        return this.random.int8(minValue, maxValue);
-    }
-
-    /** 16-bit integers */
 
     /**
      * Returns a random signed 16-bit integer on the interval [-32768, 32767].
@@ -124,9 +154,6 @@ export class AnyRandom {
      * @see short
      */
     static int16(minValue: number, maxValue: number): number;
-    static int16(minValue?: number, maxValue?: number): number {
-        return this.random.int16(minValue, maxValue);
-    }
 
     /**
      * Returns a random unsigned 16-bit integer on the interval [0, 65535].
@@ -142,9 +169,6 @@ export class AnyRandom {
      * @see ushort
      */
     static uint16(minValue: number, maxValue: number): number;
-    static uint16(minValue?: number, maxValue?: number): number {
-        return this.random.uint16(minValue, maxValue);
-    }
 
     /**
      * Returns a random signed 16-bit integer on the interval [-32768, 32767].
@@ -160,9 +184,6 @@ export class AnyRandom {
      * @see int16
      */
     static short(minValue: number, maxValue: number): number;
-    static short(minValue?: number, maxValue?: number): number {
-        return this.random.int16(minValue, maxValue);
-    }
 
     /**
      * Returns a random unsigned 16-bit integer on the interval [0, 65535].
@@ -178,11 +199,6 @@ export class AnyRandom {
      * @see uint16
      */
     static ushort(minValue: number, maxValue: number): number;
-    static ushort(minValue?: number, maxValue?: number): number {
-        return this.random.uint16(minValue, maxValue);
-    }
-
-    /** 32-bit integers */
 
     /**
      * Returns a random signed 32-bit integer on the interval [-2147483648, 2147483647].
@@ -198,9 +214,6 @@ export class AnyRandom {
      * @see int
      */
     static int32(minValue: number, maxValue: number): number;
-    static int32(minValue?: number, maxValue?: number): number {
-        return this.random.int32(minValue, maxValue);
-    }
 
     /**
      * Returns a random signed 32-bit integer on the interval [-2147483648, 2147483647].
@@ -216,9 +229,6 @@ export class AnyRandom {
      * @see int
      */
     static int(minValue: number, maxValue: number): number;
-    static int(minValue?: number, maxValue?: number): number {
-        return this.random.int32(minValue, maxValue);
-    }
 
     /**
      * Returns a random unsigned 32-bit integer on the interval [0, 4294967295].
@@ -234,9 +244,6 @@ export class AnyRandom {
      * @see uint32
      */
     static uint(minValue: number, maxValue: number): number;
-    static uint(minValue?: number, maxValue?: number): number {
-        return this.random.uint32(minValue, maxValue);
-    }
 
     /**
      * Returns a random unsigned 32-bit integer on the interval [0, 4294967295].
@@ -252,11 +259,6 @@ export class AnyRandom {
      * @see uint32
      */
     static uint32(minValue: number, maxValue: number): number;
-    static uint32(minValue?: number, maxValue?: number): number {
-        return this.random.uint32(minValue, maxValue);
-    }
-
-    /** 64-bit double-precision floating-point number */
 
     /**
      * Returns a random 64-bit double-precision floating-point number on the interval [0, 1).
@@ -282,9 +284,6 @@ export class AnyRandom {
      * @see number
      */
     static double(minValue: number, maxValue: number, scale: Scale): number;
-    static double(minValue?: number, maxValue?: number, scale?: Scale): number {
-        return this.random.double(minValue, maxValue, scale);
-    }
 
     /**
      * Returns a random 64-bit double-precision  floating-point number on the interval [0, 1).
@@ -310,11 +309,6 @@ export class AnyRandom {
      * @see double
      */
     static number(minValue: number, maxValue: number, scale: Scale): number;
-    static number(minValue?: number, maxValue?: number, scale?: Scale): number {
-        return this.random.double(minValue, maxValue, scale);
-    }
-
-    /** 32-bit single-precision floating-point number */
 
     /**
      * Returns a random 32-bit single-precision floating-point number on the interval [-infinity, infinity].
@@ -340,9 +334,6 @@ export class AnyRandom {
      * @see single
      */
     static float(minValue: number, maxValue: number, scale: Scale): number;
-    static float(minValue?: number, maxValue?: number, scale?: Scale): number {
-        return this.random.single(minValue, maxValue, scale);
-    }
 
     /**
      * Returns a random 32-bit single-precision floating-point number on the interval [-infinity, infinity].
@@ -368,11 +359,6 @@ export class AnyRandom {
      * @see float
      */
     static single(minValue: number, maxValue: number, scale: Scale): number;
-    static single(minValue?: number, maxValue?: number, scale?: Scale): number {
-        return this.random.single(minValue, maxValue, scale);
-    }
-
-    /** characters */
 
     /**
      *  Returns a single random character, taken from the ATOM CharacterSet.
@@ -384,9 +370,6 @@ export class AnyRandom {
      * @param {string | CharacterSet} characterSet The characters from which to sample.
      */
     static char(characterSet: string | CharacterSet): string;
-    static char(characterSet?: string | CharacterSet): string {
-        return this.random.char(characterSet);
-    }
 
     /**
      * Returns an array of characters, between 0 and 32 characters long, taken from the ATOM CharacterSet.
@@ -413,13 +396,6 @@ export class AnyRandom {
         maxLength: number,
         characterSet: string | CharacterSet
     ): string[];
-    static charArray(
-        minLength?: number,
-        maxLength?: number,
-        characterSet?: string | CharacterSet
-    ): string[] {
-        return this.random.charArray(minLength, maxLength, characterSet);
-    }
 
     /**
      * Returns a random string, between 0 and 32 characters long,
@@ -447,11 +423,4 @@ export class AnyRandom {
         maxLength: number,
         characterSet: string | CharacterSet
     ): string;
-    static string(
-        minLength?: number,
-        maxLength?: number,
-        characterSet?: string | CharacterSet
-    ): string {
-        return this.random.string(minLength, maxLength, characterSet);
-    }
 }

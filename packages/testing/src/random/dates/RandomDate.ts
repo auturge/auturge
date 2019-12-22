@@ -1,14 +1,19 @@
-import { Double } from "@testing/random/numbers/__public_api";
+import { Double } from "../numbers/Double";
 
 export class RandomDate {
-    public static next(earliest: Date, latest: Date): Date {
-        if (earliest == latest) {
-            return earliest;
-        }
+  public static next(earliest?: Date, latest?: Date): Date {
+    var date1 = earliest || new Date("01-01-1970");
+    var date2 = latest || new Date(Date.now());
 
-        var timeRange = latest.getTime() - earliest.getTime();
-        let newTime = earliest.getTime() + Double.next(0, timeRange);
-
-        return new Date(newTime);
+    if (date1 == date2) {
+      return earliest;
     }
+
+    let lhs = new Date(date1).getTime();
+    let rhs = new Date(date1).getTime();
+
+    let between = Double.next(lhs, rhs);
+
+    return new Date(between);
+  }
 }

@@ -2,7 +2,7 @@
 
 > Auturge/testing is a set of helpful Typescript functions for (Unit) testing.
 
-[![License][license-image]][license-url] [![NPM Version][npm-image]][npm-url] [![Build][travis-image]][travis-url]
+[![License][license-image]][license-url] [![NPM Version][npm-image]][npm-url] [![Build][travis-image]][travis-url] [![Coverage Status][coveralls-image]][coveralls-url]
 
 - [auturge/testing](#auturgetesting)
   - [Installation](#installation)
@@ -307,3 +307,5 @@ Distributed under the MIT license. See [`LICENSE`][license] for more information
 [npm-url]: https://www.npmjs.com/package/@auturge/testing
 [travis-image]: https://img.shields.io/travis/auturge/testing/master.svg
 [travis-url]: https://travis-ci.org/auturge/testing
+[coveralls-image]: https://coveralls.io/repos/github/auturge/testing/badge.svg?branch=master
+[coveralls-url]: https://coveralls.io/github/auturge/testing?branch=master

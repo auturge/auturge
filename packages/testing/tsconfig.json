@@ -1,18 +1,5 @@
 {
-    "compilerOptions": {
-        "module": "commonjs",
-        "target": "es6",
-        "lib": ["es2015", "dom"],
-        "sourceMap": true,
-        "outDir": "./out-tsc",
-        "declaration": true,
-        "removeComments": true,
-        "baseUrl": ".",
-        "paths": {
-            "@testing/*": ["./src/*"]
-        },
-        "types": ["jasmine"]
-    },
-    "include": ["**/*.ts"],
+    "extends": "./conf/tsconfig.base.json",
+    "include": ["./src/**/*.ts"],
     "exclude": ["node_modules", "**/*.d.ts"]
 }

@@ -1,38 +1,63 @@
 {
     "name": "@auturge/testing",
-    "version": "0.0.2",
+    "version": "0.0.3",
     "description": "Auturge - the testing library",
     "main": "./bundles/testing.umd.js",
-    "commonjs": "./common/testing.js",
-    "es6": "./es6/testing.js",
+    "commonjs": "./common/index.js",
+    "es6": "./es6/index.js",
     "typings": "./testing.d.ts",
     "author": "auturge",
     "license": "MIT",
-    "dependencies": {},
-    "peerDependencies": {},
     "devDependencies": {
+        "@istanbuljs/nyc-config-typescript": "0.1.3",
         "@types/jasmine": "3.4.0",
+        "coveralls": "3.0.7",
         "jasmine": "3.4.0",
         "jasmine-core": "3.4.0",
         "karma": "4.2.0",
-        "karma-cli": "2.0.0",
         "karma-chrome-launcher": "3.1.0",
+        "karma-cli": "2.0.0",
         "karma-coverage": "2.0.1",
-        "karma-coverage-istanbul-reporter": "",
+        "karma-coverage-istanbul-reporter": "2.1.0",
         "karma-jasmine": "2.0.1",
-        "karma-nyan-reporter": "0.2.5",
-        "karma-phantomjs-launcher": "1.0.4",
+        "karma-jasmine-html-reporter": "1.4.2",
         "karma-sourcemap-loader": "0.3.7",
         "karma-spec-reporter": "0.0.32",
+        "karma-summary-reporter": "1.7.1",
         "karma-typescript": "4.1.1",
+        "puppeteer": "2.0.0",
+        "shx": "0.3.2",
+        "source-map-support": "0.5.13",
+        "ts-node": "8.4.1",
         "typescript": "3.5.3"
     },
     "repository": {
         "type": "git",
-        "url": "https://github.com/auturge/auturge.git"
+        "url": "https://github.com/auturge/testing.git"
     },
     "scripts": {
-        "test": "karma start ./karma.conf.js"
+        "build": "pushd \"../..\" && npm run build:testing && popd",
+        "test": "yarn test:clean && yarn test:run",
+        "test:clean": "shx rm -rf built coverage .nyc-output",
+        "test:run": "karma start ./conf/karma.config.js --single-run --browsers HeadlessChrome"        
     },
-    "sideEffects": false
+    "sideEffects": false,
+    "nyc": {
+        "check-coverage": true,
+        "per-file": true,
+        "lines": 95,
+        "statements": 95,
+        "functions": 95,
+        "branches": 95,
+        "exclude": [
+            "**/*.spec.js",
+            "**/tests/**",
+            "node_modules"
+        ],
+        "reporter": [
+            "html",
+            "lcov",
+            "text-summary"
+        ]
+    }
 }

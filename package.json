@@ -17,20 +17,21 @@
     },
     "scripts": {
         "build": "npm-run-all check-env clean build:testing",
-        "build:testing": "npm-run-all build:testing:bundles build:testing:common build:testing:es6 copy:package:json:testing copy:readme:testing",
-        "build:testing:bundles": "webpack --config ./packages/testing/webpack.config.js --display-error-details --progress",
+        "build:testing": "npm-run-all build:testing:bundles build:testing:common build:testing:es6 copy:package:json:testing copy:readme:testing copy:typings:testing",
+        "build:testing:bundles": "webpack --config ./packages/testing/conf/webpack.config.js --display-error-details --progress",
         "build:testing:common": "tsc -p ./packages/testing/tsconfig.json -m commonjs --outdir ./built/testing/commonjs",
         "build:testing:es6": "tsc -p ./packages/testing/tsconfig.json -m es6 --outDir ./built/testing/es6",
         "copy:package:json:testing": "node ./scripts/copy-package-json/copy-trimmed-package-json.js ./packages/testing/package.json ./built/testing",
         "copy:readme:testing": "shx cp ./packages/testing/readme.md ./built/testing",
+        "copy:typings:testing": "shx cp ./packages/testing/src/testing.d.ts ./built/testing",
         "check-env": "node ./scripts/check-env/check-environment.js",
         "clean": "shx rm -rf built dist",
         "commitmsg": "node ./scripts/git/commit-msg.js",
         "lint": "gulp lint",
         "preinstall": "node ./scripts/yarn/check-yarn.js",
-        "publish:testing": "cd ./built/testing && npm publish --access public",
+        "publish:testing": "echo Login to npm, then cd ./built/testing, then `npm publish --access public`",
         "test": "npm-run-all test:testing",
-        "test:testing": "karma start ./packages/testing/karma.conf.js"
+        "test:testing": "karma start ./packages/testing/conf/karma.config.js --single-run --browsers HeadlessChrome"
     },
     "optionalDependencies": {
         "fsevents": "2.0.7"
@@ -38,6 +39,7 @@
     "devDependencies": {
         "@types/minimist": "1.2.0",
         "@types/jasmine": "3.4.0",
+        "@angular/core": "8.2.14",
         "awesome-typescript-loader": "5.2.1",
         "gulp": "4.0.2",
         "gulp-tslint": "8.1.4",
@@ -50,10 +52,12 @@
         "karma-coverage": "2.0.1",
         "karma-coverage-istanbul-reporter": "",
         "karma-jasmine": "2.0.1",
+        "karma-jasmine-html-reporter": "",
         "karma-nyan-reporter": "0.2.5",
         "karma-phantomjs-launcher": "1.0.4",
         "karma-sourcemap-loader": "0.3.7",
         "karma-spec-reporter": "0.0.32",
+        "karma-summary-reporter": "",
         "karma-typescript": "4.1.1",
         "minimist": "1.2.0",
         "npm-run-all": "4.1.5",

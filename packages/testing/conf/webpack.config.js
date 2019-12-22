@@ -5,15 +5,18 @@ const path = require("path");
 //==========================================================================================
 
 const LIBRARY_NAME = "testing";
-const PROJECT_ROOT = path.resolve(__dirname, "../..");
-const PACKAGE_ROOT = path.resolve(__dirname, "./");
-const webpackBase = path.resolve(PROJECT_ROOT, "./conf/webpack.config.base.js");
+const AUTURGE_ROOT = path.resolve(__dirname, "../../..");
+const PACKAGE_ROOT = path.resolve(__dirname, "../");
+const webpackBase = path.resolve(AUTURGE_ROOT, "./conf/webpack.config.base.js");
 
 // Specify where webpack should start the bundling process
 const entryPath = path.resolve(PACKAGE_ROOT, "./src/index.ts");
 
 // Specify where webpack should place the built bundles
-const bundlePath = path.resolve(PROJECT_ROOT, `./built/${LIBRARY_NAME}/bundles`);
+const bundlePath = path.resolve(
+    AUTURGE_ROOT,
+    `./built/${LIBRARY_NAME}/bundles`
+);
 
 const testsPath = path.resolve(PACKAGE_ROOT, "./tests");
 
@@ -24,7 +27,12 @@ const tsConfig = path.resolve(PACKAGE_ROOT, "./tsconfig.json");
 
 // identify paths
 // const PROJECT_ROOT = path.resolve(__dirname, '../');
-var PATHS = { entryPoint: entryPath, bundles: bundlePath, tsConfig: tsConfig, tests: testsPath };
+var PATHS = {
+    entryPoint: entryPath,
+    bundles: bundlePath,
+    tsConfig: tsConfig,
+    tests: testsPath
+};
 
 let entry = {};
 entry[`${LIBRARY_NAME}.umd`] = [PATHS.entryPoint];
@@ -97,7 +105,7 @@ function describePackJob() {
     );
     console.log(" ");
     console.log(`        NODE_ENV: [${NODE_ENV}]`);
-    console.log(`    PROJECT_ROOT: [${PROJECT_ROOT}]`);
+    console.log(`    PROJECT_ROOT: [${AUTURGE_ROOT}]`);
     console.log(`    PACKAGE_ROOT: [${PACKAGE_ROOT}]`);
     console.log(`       entryPath: [${PATHS.entryPoint}]`);
     console.log(`        tsConfig: [${PATHS.tsConfig}]`);
