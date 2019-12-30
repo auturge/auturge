@@ -1,9 +1,14 @@
 /**
- * @license Auturge v0.0.3
+ * @license Auturge v0.0.6
  * (c) 2019 Auturge https://github.com/auturge/
  * License: MIT
  */
 
+import {} from ".";
+
+/**
+ * Sets of characters for testing string-handling methods.
+ */
 export declare enum CharacterSet {
     /** Upper- and lower-case English letters. */
     ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
@@ -23,15 +28,17 @@ export declare enum CharacterSet {
     /**
      * Concatenation of the `ALPHANUMERIC` and `SYMBOLS` character sets.
      */
-    ATOM = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&'*+-/=?^_`{|}~"
+    ATOM = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&'*+-/=?^_`{|}~",
+
+    /** Upper- and lower-case Greek letters. */
+    GREEK = "ΑαΒβΓγΔδΕεΖζΗηΘθΙιΚκΛλΜμΝνΞξΟοΠπΡρΣσςϹϲΤτΥυΦφΧχΨψΩω"
 }
 
 /**
  * @summary
- * For data types that hold large values (e.g., double data type holds values up
- * to 10^308), it is extremely unlikely that any Double chosen at random will
- * have a magnitude smaller than 10 ^ "huge". This class gives a few options for
- * generating random Doubles at different scales.
+ * For data types that hold large values, (for example, 10^308), it is extremely unlikely
+ * that any such number chosen at random will have a magnitude smaller than 10^"huge".
+ * This enumeration gives a few options for generating random numbers at different scales.
  */
 export declare enum Scale {
     /** The trivial non-scale. */
@@ -51,32 +58,34 @@ export declare enum Scale {
 
 export declare class AnyRandom {
     /**
-     * @returns a random `Date` between 01-JAN-1970 and today.
+     * Returns a random `Date` between `01-JAN-1970` and `now`.
      */
     static date(): Date;
 
     /**
-     * @returns a random `Date` between two dates.
+     * Returns a random `Date` within the range defined by `earliest` and `latest`.
+     * @param {Date} earliest The earliest date that the result could take.
+     * @param {number} latest The latest date that the result could take.
      */
     static date(earliest: Date, latest: Date): Date;
 
     /**
-     * @returns a random boolean value (`true` or `false`).
+     * Returns a random boolean value (`true` or `false`).
      */
     static bool(): boolean;
 
     /**
-     * @returns a random boolean value (`true` or `false`).
+     * Returns a random boolean value (`true` or `false`).
      */
     static boolean(): boolean;
 
     /**
-     * @returns a random `sign`, indicating whether a number is positive or negative.
+     * Returns a random `sign`, indicating whether a number is positive or negative.
      */
     static sign(): number;
 
     /**
-     * @returns a random `sign`, indicating whether a number is positive, negative, or zero (when `includeZero` is `true`).
+     * Returns a random `sign`, indicating whether a number is positive, negative, or zero (when `includeZero` is `true`).
      */
     static sign(includeZero: boolean): number;
 

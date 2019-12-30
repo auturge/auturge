@@ -7,17 +7,12 @@ process.env.CHROME_BIN = puppeteer.executablePath();
 //==========================================================================================
 
 const LIBRARY_NAME = "testing";
-const AUTURGE_ROOT = path.resolve(__dirname, "../../..");
 const PACKAGE_ROOT = path.resolve(__dirname, "../");
 
-// const webpackBase = path.resolve(AUTURGE_ROOT, "./conf/webpack.config.base.js");
-
 // Specify where the tests should be compiled to, and where coverage results should be stored
-const COVERAGE_FOLDER = path.resolve(AUTURGE_ROOT, "./coverage/testing");
-
+const COVERAGE_FOLDER = path.resolve(PACKAGE_ROOT, `./test/coverage`);
 
 //==========================================================================================
-
 
 module.exports = function(config) {
     config.set({
@@ -37,7 +32,7 @@ module.exports = function(config) {
                 served: true
             },
             {
-                pattern: "tests/**/*.ts",
+                pattern: "test/**/*.ts",
                 watched: false,
                 included: true,
                 served: true
@@ -64,7 +59,7 @@ module.exports = function(config) {
         ],
 
         karmaTypescriptConfig: {
-            tsconfig: "./conf/tsconfig.test.json",
+            tsconfig: "./test/tsconfig.json",
             compilerOptions: {
                 module: "CommonJS"
             },

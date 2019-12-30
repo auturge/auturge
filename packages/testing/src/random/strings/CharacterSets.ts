@@ -1,3 +1,6 @@
+/**
+ * Sets of characters for testing string-handling methods.
+ */
 export enum CharacterSet {
     /** Upper- and lower-case English letters. */
     ALPHA = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz",
@@ -17,5 +20,8 @@ export enum CharacterSet {
     /**
      * Concatenation of the `ALPHANUMERIC` and `SYMBOLS` character sets.
      */
-    ATOM = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&'*+-/=?^_`{|}~"
+    ATOM = "ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789!#$%&'*+-/=?^_`{|}~",
+
+    /** Upper- and lower-case Greek letters. */
+    GREEK = "ΑαΒβΓγΔδΕεΖζΗηΘθΙιΚκΛλΜμΝνΞξΟοΠπΡρΣσςϹϲΤτΥυΦφΧχΨψΩω"
 }

@@ -1,16 +1,20 @@
 {
     "compilerOptions": {
-        "module": "commonjs",
-        "target": "es6",
-        "lib": ["es2015", "dom"],
-        "sourceMap": true,
+        "target": "es5", // compatible with older browsers
+        "module": "commonjs", // Compatible with Node.js, but not compatible with browser <script />!
+        "moduleResolution": "node", // Tell tsc to look in node_modules for modules
+        "sourceMap": true, // whether to create *.js.map files
         "outDir": "./out-tsc",
         "declaration": true,
         "removeComments": true,
+
+        "lib": ["es2015", "dom"],
+
         "baseUrl": "../",
         "paths": {
             "@testing/*": ["./src/*"]
         },
         "types": ["jasmine"]
-    }
+    },
+    "exclude": ["node_modules", "**/*.d.ts"]
 }

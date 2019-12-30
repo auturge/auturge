@@ -1,5 +1,5 @@
 import { AnyRandom } from "@testing/random/AnyRandom";
-import { CharacterSet } from "@testing/random/strings/__public_api";
+import { CharacterSet } from "@testing/random/strings/CharacterSets";
 
 function getSubInterval(min, max) {
     let range = max - min + 1;

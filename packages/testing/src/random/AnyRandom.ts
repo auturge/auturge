@@ -1,28 +1,35 @@
-import { AnyRandomImplementation } from "./AnyRandomImplementation";
-import { RandomObjectGenerator } from "./RandomObjectGenerator";
-import { CharacterSet } from "./strings/CharacterSets";
-import { Scale } from "./numbers/Scale";
+import { AnyRandomImplementation } from "@testing/random/AnyRandomImplementation";
+import { RandomObjectGenerator } from "@testing/random/RandomObjectGenerator";
+import { CharacterSet } from "@testing/random/strings/CharacterSets";
+import { Scale } from "@testing/random/numbers/Scale";
 
 export class AnyRandom {
     private static random: RandomObjectGenerator = new AnyRandomImplementation();
 
+    /**
+     * Returns a random `Date` between `01-JAN-1970` and `now`.
+     */
     static date(): Date;
 
+    /**
+     * Returns a random `Date` within the range defined by `earliest` and `latest`.
+     * @param {Date} earliest The earliest date that the result could take.
+     * @param {number} latest The latest date that the result could take.
+     */
     static date(earliest: Date, latest: Date): Date;
-
     static date(earliest?: Date, latest?: Date): Date {
         return this.random.date(earliest, latest);
     }
 
     /**
-     * @returns a random boolean value (`true` or `false`).
+     * Returns a random boolean value (`true` or `false`).
      */
     static bool(): boolean {
         return this.random.boolean();
     }
 
     /**
-     * @returns a random boolean value (`true` or `false`).
+     * Returns a random boolean value (`true` or `false`).
      */
     static boolean(): boolean {
         return this.random.boolean();

@@ -1,6 +1,6 @@
-import { RandomScaledNumber } from "./RandomScaledNumber";
-import { Scale } from "./Scale";
-import { Sign } from "./Sign";
+import { RandomScaledNumber } from "@testing/random/numbers/RandomScaledNumber";
+import { Scale } from "@testing/random/numbers/Scale";
+import { Sign } from "@testing/random/numbers/Sign";
 
 export class Double extends RandomScaledNumber {
     protected next(minValue: number, maxValue: number, scale: Scale): number {
@@ -98,14 +98,14 @@ export class Double extends RandomScaledNumber {
         if (
             !Number.isFinite(minValue) &&
             minValue < 0 &&
-            (!Number.isFinite(maxValue) && maxValue < 0)
+            !Number.isFinite(maxValue) && maxValue < 0
         ) {
             return false;
         }
         if (
             !Number.isFinite(minValue) &&
             minValue > 0 &&
-            (!Number.isFinite(maxValue) && maxValue > 0)
+            !Number.isFinite(maxValue) && maxValue > 0
         ) {
             return false;
         }

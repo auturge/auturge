@@ -1,4 +1,4 @@
-import { RandomObjectGenerator } from "./RandomObjectGenerator";
+import { RandomObjectGenerator } from "@testing/random/RandomObjectGenerator";
 import {
     Scale,
     Sign,
@@ -10,9 +10,9 @@ import {
     UInt32,
     Double,
     Single
-} from "./numbers/__public_api";
-import { RandomDate } from "./dates/__public_api";
-import { CharacterSet, RandomChar, RandomString } from "./strings/__public_api";
+} from "@testing/random/numbers/__public_api";
+import { RandomDate } from "@testing/random/dates/__public_api";
+import { CharacterSet, RandomChar, RandomString } from "@testing/random/strings/__public_api";
 
 export class AnyRandomImplementation implements RandomObjectGenerator {
     boolean(): boolean {
@@ -58,18 +58,10 @@ export class AnyRandomImplementation implements RandomObjectGenerator {
     char(characterSet: string | CharacterSet): string {
         return RandomChar.char(characterSet);
     }
-    charArray(
-        minLength: number,
-        maxLength: number,
-        characterSet: string | CharacterSet
-    ): string[] {
+    charArray(minLength: number, maxLength: number, characterSet: string | CharacterSet): string[] {
         return RandomChar.charArray(minLength, maxLength, characterSet);
     }
-    string(
-        minLength: number,
-        maxLength: number,
-        characterSet: string | CharacterSet
-    ): string {
+    string(minLength: number, maxLength: number, characterSet: string | CharacterSet): string {
         return RandomString.string(minLength, maxLength, characterSet);
     }
 }
