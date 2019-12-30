@@ -1,0 +1,143 @@
+{
+    //
+    // Editor
+    // ======================================================================================================
+    // Controls the font family.
+    "editor.fontFamily": "Fira Code, Consolas, 'Courier New', monospace",
+
+    // Enables/Disables font ligatures.
+    "editor.fontLigatures": true,
+
+    // Controls whether the editor should automatically adjust the indentation when users type, paste, move or indent lines.
+    //  - none: The editor will not insert indentation automatically.
+    //  - keep: The editor will keep the current line's indentation.
+    //  - brackets: The editor will keep the current line's indentation and honor language defined brackets.
+    //  - advanced: The editor will keep the current line's indentation, honor language defined brackets and invoke special onEnterRules defined by languages.
+    //  - full: The editor will keep the current line's indentation, honor language defined brackets, invoke special onEnterRules defined by languages, and honor indentationRules defined by languages.
+    "editor.autoIndent": "full",
+
+    // Insert spaces when pressing `Tab`. This setting is overridden based on the file contents when `editor.detectIndentation` is on.
+    "editor.insertSpaces": true,
+
+    // Controls how the editor should render whitespace characters.
+    //  - none
+    //  - boundary: Render whitespace characters except for single spaces between words.
+    //  - all
+    "editor.renderWhitespace": "none",
+
+    // Controls whether the minimap is shown.
+    "editor.minimap.enabled": false,
+
+    // Limit the width of the minimap to render at most a certain number of columns.
+    "editor.minimap.maxColumn": 100,
+
+    // Remove trailing auto inserted whitespace.
+    "editor.trimAutoWhitespace": false,
+
+    // Enables tab completions.
+    //  - on: Tab complete will insert the best matching suggestion when pressing tab.
+    //  - off: Disable tab completions.
+    //  - onlySnippets: Tab complete snippets when their prefix match. Works best when 'quickSuggestions' aren't enabled.
+    "editor.tabCompletion": "on",
+
+    // The number of spaces a tab is equal to. This setting is overriden based on the file contents when `editor.detectIndentation` is on.
+    "editor.tabSize": 4,
+
+    // When opening a file, `editor.tabSize` and `editor.insertSpaces` will be detected based on the file contents.
+    "editor.detectIndentation": false,
+
+    // Format a file on save. A formatter must be available, the file must not be saved after delay, and the editor must not be shutting down.
+    "editor.formatOnSave": true,
+
+    // Controls whether the editor should automatically format the pasted content. A formatter must be available and the formatter should be able to format a range in a document.
+    "editor.formatOnPaste": true,
+
+    // Controls whether the editor should render the vertical glyph margin. Glyph margin is mostly used for debugging.
+    "editor.glyphMargin": false,
+
+    //
+    // Files
+    // ======================================================================================================
+    // When enabled, insert a final new line at the end of the file when saving it.
+    "files.insertFinalNewline": true,
+
+    // When enabled, will trim all new lines after the final new line at the end of the file when saving it.
+    "files.trimFinalNewlines": true,
+
+    // When enabled, will trim trailing whitespace when saving a file.
+    "files.trimTrailingWhitespace": false,
+
+    // The default end of line character.
+    //  - \n: LF
+    //  - \r\n: CRLF
+    //  - auto: Uses operating system specific end of line character.
+    "files.eol": "auto",
+
+    // Exclude third party modules and build artifacts from the editor watchers/searches.
+    "files.watcherExclude": {
+        "**/.git/objects/**": true,
+        "**/.git/subtree-cache/**": true,
+        "**/node_modules/**": true,
+        "**/built/**": true
+    },
+    "search.exclude": {
+        "**/node_modules": true,
+        "**/built": true,
+        "**/bower_components": true,
+        "i18n/**": true
+    },
+
+    //
+    // File-type specific rules
+    // ======================================================================================================
+    "html.format.preserveNewLines": true,
+    "[json]": {},
+    "[javascript]": {
+        "editor.formatOnSave": true
+    },
+    "javascript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyBrackets": true,
+    "[typescript]": {
+        "editor.formatOnPaste": true,
+        "editor.formatOnSave": true
+    },
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingNonemptyParenthesis": false,
+    "typescript.format.insertSpaceAfterOpeningAndBeforeClosingTemplateStringBraces": true,
+    "typescript.preferences.quoteStyle": "single",
+    "typescript.tsdk": "node_modules\\typescript\\lib",
+    "[markdown]": {
+        "editor.formatOnSave": true,
+        "editor.wordWrap": "on",
+        "editor.renderWhitespace": "all",
+        "editor.acceptSuggestionOnEnter": "off"
+    },
+    "git.ignoreLimitWarning": true,
+
+    //
+    // MarkDownLint rules
+    // ======================================================================================================
+    "markdownlint.config": {
+        "default": true,
+        "MD001": false,
+        "MD003": {
+            "style": "consistent"
+        },
+        "MD007": false,
+        "MD014": false,
+        "MD024": false,
+        "MD026": false,
+        "MD030": false,
+        "MD033": false,
+        "no-hard-tabs": false
+    },
+
+    //
+    // Prettier rules
+    // ======================================================================================================
+    "prettier.printWidth": 100,
+    "prettier.tabWidth": 4,
+    "prettier.useTabs": false,
+    "prettier.semi": true,
+    "prettier.bracketSpacing": true,
+    "prettier.arrowParens": "always",
+    "prettier.endOfLine": "auto"
+}
