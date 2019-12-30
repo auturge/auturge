@@ -12,13 +12,13 @@ const PACKAGE_ROOT = path.resolve(__dirname, "../");
 const TEST_PATH = path.resolve(PACKAGE_ROOT, "./test");
 
 // Specify where the tests should be compiled to, and where coverage results should be stored
-const COVERAGE_FOLDER = path.resolve(TEST_PATH, `./coverage`);
+const COVERAGE_FOLDER = path.resolve(TEST_PATH, `./.coverage`);
 
 // Get the package.json
 const PACKAGE_JSON_PATH = path.resolve(PACKAGE_ROOT, "./package.json");
 const pkg = require(PACKAGE_JSON_PATH);
 
-// Specify the library name
+// Get the library name
 var LIBRARY_NAME = "";
 // if it has a / or \ in the package name, then strip it down to the last part after the / or \
 if (pkg.name.includes("/")) {
