@@ -6,9 +6,9 @@
 
 ## Packages
 
-| Package         | Purpose            |                     Version                      |                     License                      | Homepage                                                                       |
-| :-------------- | :----------------- | :----------------------------------------------: | :----------------------------------------------: | :----------------------------------------------------------------------------- |
-| auturge/testing | Unit testing tools | [![Version][testing-npm-image]][testing-npm-url] | [![License][mit-license-image]][mit-license-url] | [![@auturge testing on GitHub][testing-github-badge]][testing-github-homepage] |
+| Package          | Purpose            |                     Version                      |                     License                      | Homepage                                                                       |
+| :--------------- | :----------------- | :----------------------------------------------: | :----------------------------------------------: | :----------------------------------------------------------------------------- |
+| @auturge/testing | Unit testing tools | [![Version][testing-npm-image]][testing-npm-url] | [![License][mit-license-image]][mit-license-url] | [![@auturge testing on GitHub][testing-github-badge]][testing-github-homepage] |
 
 ---
 
