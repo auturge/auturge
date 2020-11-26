@@ -1,0 +1,34 @@
+# built output folder
+/built/
+/dist/
+
+# test output folders
+out-tsc/
+
+# temp folder for junk
+/temp/
+
+# dependencies
+node_modules/
+
+# IDEs and editors
+.settings/
+.idea/
+.vscode/launch.json
+.vscode/settings.json
+.c9
+.vimrc
+.nvimrc
+.editorconfig
+.nyc_output/
+
+#System Files
+.DS_Store
+
+# Ignore npm/yarn debug log
+npm-debug.log
+yarn-error.log
+yarn.lock
+
+coverage/
+.coverage/
