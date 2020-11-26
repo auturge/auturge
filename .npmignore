@@ -1,14 +1,89 @@
-packages/
 
-built/
+# Package-Specific Exclusions
+#======================================================================
+
+packages/
 docs/
 scripts/
 conf/
-out-tsc/
 
-.github/
-.settings/
-.vscode/
+
+# Output Folders
+#======================================================================
+
+## built output folder
+build/
+
+## intermediate build output folders
+bazel-out/
+**/.tsc-output/
+
+## test output folders
+test/
+spec/
+**/.nyc_output/
+**/coverage/
+
+
+# Package Managers
+#======================================================================
+
+## node
+node_modules/
+npm-debug.log
 package-lock.json
+
+## yarn
+.yarn/*
+.pnp.*
+yarn-error.log
 yarn.lock
-CONTRIBUTING.md
+
+
+# Build Tools
+#======================================================================
+.travis.yml
+.jenkins.yml
+.codeclimate.yml
+
+
+# Linters
+#======================================================================
+.jscsrc
+.jshintrc
+.eslintrc*
+
+
+# IDEs and editors
+#======================================================================
+
+.idea/
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
+.vimrc
+.nvimrc
+.editorconfig
+.prettierrc
+
+## IDE - VSCode
+.vscode/
+.history/
+
+
+# Misc
+#======================================================================
+
+## System Files
+.github/
+**/.DS_Store
+**/Thumbs.db
+
+## temp folders
+**/temp/
+**/tmp/
+**/old/
+**/bak/

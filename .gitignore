@@ -1,33 +1,73 @@
-# built output folder
-/built/
-/dist/
 
-# test output folders
-out-tsc/
+# Package-Specific Exclusions
+#======================================================================
 
-# temp folder for junk
-/temp/
+## N/A
 
-# dependencies
+
+# Output Folders
+#======================================================================
+
+## built output folder
+build/
+dist/
+
+## intermediate build output folders
+bazel-out/
+**/.tsc-output/
+
+## test output folders
+**/.nyc_output/
+**/coverage/
+
+# Package Managers
+#======================================================================
+
+## node
 node_modules/
+npm-debug.log
+
+## yarn
+.yarn/*
+!.yarn/releases
+!.yarn/plugins
+!.yarn/sdks
+!.yarn/versions
+.pnp.*
+yarn-error.log
 
 # IDEs and editors
-.settings/
+#======================================================================
+
 .idea/
-.vscode/launch.json
-.vscode/settings.json
-.c9
+.project
+.classpath
+.c9/
+*.launch
+.settings/
+*.sublime-workspace
 .vimrc
 .nvimrc
-.editorconfig
-.nyc_output/
 
-#System Files
-.DS_Store
+## IDE - VSCode
+.vscode/*
+!.vscode/README.md
+!.vscode/recommended-*.jsonc
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+.history/*
 
-# Ignore npm/yarn debug log
-npm-debug.log
-yarn-error.log
-yarn.lock
+# Misc
+#======================================================================
 
-coverage/
+## System Files
+**/.DS_Store
+**/Thumbs.db
+
+## temp folders
+**/temp/
+**/tmp/
+**/old/
+**/bak/
