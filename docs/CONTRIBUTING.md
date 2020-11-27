@@ -95,7 +95,7 @@ Before you submit your Pull Request (PR) consider the following guidelines:
 
 -   Make the required updates.
 
--   Re-run the Auturge test suites to ensure tests are still passing.
+-   Re-run the test suites to ensure tests are still passing.
 
 -   Rebase your branch and force push to your GitHub repository (this will update your Pull Request):
 

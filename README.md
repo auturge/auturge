@@ -8,9 +8,9 @@
 
 [![License][mit-license-image]][mit-license-url]
 
-| Package          | Purpose            |                     Version                      |                    Homepage                                                                       |
-| :--------------- | :----------------- | :----------------------------------------------: | :----------------------------------------------------------------------------- |
-| @auturge/testing | Unit testing tools | [![Version][testing-npm-image]][testing-npm-url] |  [![@testing on GitHub][testing-github-badge]][testing-github-homepage] |
+| Package                  | Purpose                                                      |                             Version                              | Homepage                                                                                      |
+| :----------------------- | :----------------------------------------------------------- | :--------------------------------------------------------------: | :-------------------------------------------------------------------------------------------- |
+| @auturge/testing         | Unit testing tools                                           |         [![Version][testing-npm-image]][testing-npm-url]         | [![@testing on GitHub][testing-github-badge]][testing-github-homepage]                        |
 | @auturge/config-resolver | Given a set of likely paths, locates and loads a config file | [![Version][config-resolver-npm-image]][config-resolver-npm-url] | [![config-resolver on GitHub][config-resolver-github-badge]][config-resolver-github-homepage] |
 
 ---

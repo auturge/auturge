@@ -3,18 +3,22 @@
 This document describes how to set up your development environment to build and test Auturge.
 It also explains the basic mechanics of using `git`, `node`, and `npm`.
 
--   Building and Testing Auturge
+-   [Setup](#setup)
     -   [Prerequisite Software](#prerequisite-software)
     -   [Getting the Sources](#getting-the-sources)
     -   [Installing NPM Modules](#installing-npm-modules)
-    -   [Building](#building)
-    -   [Running Tests Locally](#running-tests-locally)
+-   [Building](#building)
+-   [Running Tests Locally](#running-tests-locally)
 
 See the [contribution guidelines](#contributing) if you'd like to contribute to Auturge.
 
-## Prerequisite Software
+---
 
-Before you can build and test Auturge, you must install and configure the following products on your development machine:
+## Setup
+
+### Prerequisite Software
+
+Before you can build and test an Auturge package, you must install and configure the following products on your development machine:
 
 -   [Git](http://git-scm.com) which is a distributed version control system.
 
@@ -24,13 +28,15 @@ Before you can build and test Auturge, you must install and configure the follow
 
 -   (optional) a nice visual interface between you and Git, like [Fork](https://fork.dev), or [SourceTree](https://www.sourcetreeapp.com/).
 
-## Getting the Sources
+---
 
-Fork and clone the Auturge repository:
+### Getting the Sources
+
+Fork and clone the repository:
 
 1. Login to your GitHub account or create one by following the instructions given [here](https://github.com/join).
 2. [Fork](http://help.github.com/forking) the project repository.
-3. Clone your fork of the repository and define an `upstream` remote pointing back to the Auturge repository that you forked in the first place.
+3. Clone your fork of the repository and define an `upstream` remote pointing back to the repository that you forked in the first place.
 
 Clone your Git repository:
 
@@ -50,13 +56,17 @@ Add the repository as an upstream remote to your repository:
 $ git remote add upstream https://github.com/auturge/<repository name>.git
 ```
 
-## Installing NPM Modules
+---
+
+### Installing NPM Modules
 
 Next, install the JavaScript modules needed to build and test the package:
 
 ```shell
 npm install
 ```
+
+---
 
 ## Building
 
@@ -68,9 +78,9 @@ npm run build
 
 -   Results are put in the `build/` or `dist/` folder.
 
-## Running Tests Locally
+---
 
-Karma is used as the primary test runner for building and testing Auturge.
+## Running Tests Locally
 
 You should execute all test suites before submitting a PR to GitHub:
 
