@@ -39,10 +39,10 @@ Here is my understanding of the steps that are most commonly expected to be run 
         1. `git commit -am '2.0.0'`
         1. `git tag v2.0.0`
 1. [Publish to npm:](#publish)
-    1. npm publish
+    1. `npm publish --access public`
 1. [Publish to Git:](#push)
-    1. git push
-    1. git push --tags
+    1. `git push`
+    1. `git push --tags`
 1. [Create a GitHub Release](#release) (optional)
 
 ---
@@ -128,7 +128,7 @@ For example, you could run the safety checks mentioned above in a `preversion` s
 Finally, once you’re confident this version is ready to release, you can publish the updated package to npm.
 
 ```bash
-npm publish
+npm publish --access public
 ```
 
 The `publish` command will add the updated package to the `npm` registry.

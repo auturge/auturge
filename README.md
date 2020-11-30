@@ -1,6 +1,8 @@
-# auturge
+# <h1 align="center">auturge</h1>
 
-> Auturge is a collection of helpful TypeScript/Javascript packages.
+<p align="center">
+A collection of helpful TypeScript/Javascript packages.
+</p>
 
 ---
 
@@ -8,8 +10,9 @@
 
 [![License][mit-license-image]][mit-license-url]
 
-| Package                  | Purpose                                                      |                             Version                              | Homepage                                                                                      |
+| Package                  | Purpose                                                      |                             npm                                | Homepage                                                                                      |
 | :----------------------- | :----------------------------------------------------------- | :--------------------------------------------------------------: | :-------------------------------------------------------------------------------------------- |
+| @auturge         | Boilerplate/shared documentation for auturge projects |         N/A         | [![@auturge][auturge-github-badge]][auturge-github-homepage]                       |
 | @auturge/testing         | Unit testing tools                                           |         [![Version][testing-npm-image]][testing-npm-url]         | [![@testing on GitHub][testing-github-badge]][testing-github-homepage]                        |
 | @auturge/config-resolver | Given a set of likely paths, locates and loads a config file | [![Version][config-resolver-npm-image]][config-resolver-npm-url] | [![config-resolver on GitHub][config-resolver-github-badge]][config-resolver-github-homepage] |
 
@@ -25,6 +28,8 @@ guidelines for [contributing][contributing] and please consult and adhere to our
 [mit-license]: https://github.com/auturge/testing/blob/master/LICENSE
 [mit-license-image]: http://img.shields.io/:license-mit-blue.svg?style=flat-square
 [mit-license-url]: http://badges.mit-license.org
+[auturge-github-badge]: https://img.shields.io/static/v1?label=You%20Are&message=Here&color=blueviolet
+[auturge-github-homepage]: https://github.com/auturge/auturge
 [testing-github-badge]: https://img.shields.io/github/package-json/v/auturge/testing?label=GitHub
 [testing-github-homepage]: https://github.com/auturge/testing
 [testing-npm-image]: https://img.shields.io/npm/v/@auturge/testing.svg
