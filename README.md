@@ -8,13 +8,15 @@ A collection of helpful TypeScript/Javascript packages.
 
 ## Packages
 
-[![License][mit-license-image]][mit-license-url]
+[![License][mit-license-image]][mit-license]
 
 | Package                  | Purpose                                                      |                             npm                                | Homepage                                                                                      |
 | :----------------------- | :----------------------------------------------------------- | :--------------------------------------------------------------: | :-------------------------------------------------------------------------------------------- |
 | @auturge         | Boilerplate/shared documentation for auturge projects |         N/A         | [![@auturge][auturge-github-badge]][auturge-github-homepage]                       |
 | @auturge/testing         | Unit testing tools                                           |         [![Version][testing-npm-image]][testing-npm-url]         | [![@testing on GitHub][testing-github-badge]][testing-github-homepage]                        |
 | @auturge/config-resolver | Given a set of likely paths, locates and loads a config file | [![Version][config-resolver-npm-image]][config-resolver-npm-url] | [![config-resolver on GitHub][config-resolver-github-badge]][config-resolver-github-homepage] |
+| @auturge/json-trim | Copies a json file while trimming out undesired keys | N/A <!-- [![Version][json-trim-npm-image]][json-trim-npm-url]--> | [![json-trim on GitHub][json-trim-github-badge]][json-trim-github-homepage] |
+
 
 ---
 
@@ -25,9 +27,9 @@ guidelines for [contributing][contributing] and please consult and adhere to our
 
 [coc]: https://github.com/auturge/auturge/blob/master/docs/CODE_OF_CONDUCT.md
 [contributing]: https://github.com/auturge/auturge/blob/master/docs/CONTRIBUTING.md
-[mit-license]: https://github.com/auturge/testing/blob/master/LICENSE
+[mit-license]: https://github.com/auturge/auturge/blob/master/LICENSE
 [mit-license-image]: http://img.shields.io/:license-mit-blue.svg?style=flat-square
-[mit-license-url]: http://badges.mit-license.org
+[mit-license-url]: http://mit-license.org
 [auturge-github-badge]: https://img.shields.io/static/v1?label=You%20Are&message=Here&color=blueviolet
 [auturge-github-homepage]: https://github.com/auturge/auturge
 [testing-github-badge]: https://img.shields.io/github/package-json/v/auturge/testing?label=GitHub
@@ -38,3 +40,7 @@ guidelines for [contributing][contributing] and please consult and adhere to our
 [config-resolver-github-homepage]: https://github.com/auturge/config-resolver
 [config-resolver-npm-image]: https://img.shields.io/npm/v/@auturge/config-resolver.svg
 [config-resolver-npm-url]: https://www.npmjs.com/package/@auturge/config-resolver
+[json-trim-github-badge]: https://img.shields.io/github/package-json/v/auturge/json-trim?label=GitHub
+[json-trim-github-homepage]: https://github.com/auturge/json-trim
+[json-trim-npm-image]: https://img.shields.io/npm/v/@auturge/json-trim.svg
+[json-trim-npm-url]: https://www.npmjs.com/package/@auturge/json-trim
