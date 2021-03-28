@@ -15,7 +15,7 @@ A collection of helpful TypeScript/Javascript packages.
 | @auturge         | Boilerplate/shared documentation for auturge projects |         N/A         | [![@auturge][auturge-github-badge]][auturge-github-homepage]                       |
 | @auturge/testing         | Unit testing tools                                           |         [![Version][testing-npm-image]][testing-npm-url]         | [![@testing on GitHub][testing-github-badge]][testing-github-homepage]                        |
 | @auturge/config-resolver | Given a set of likely paths, locates and loads a config file | [![Version][config-resolver-npm-image]][config-resolver-npm-url] | [![config-resolver on GitHub][config-resolver-github-badge]][config-resolver-github-homepage] |
-| @auturge/json-trim | Copies a json file while trimming out undesired keys | N/A <!-- [![Version][json-trim-npm-image]][json-trim-npm-url]--> | [![json-trim on GitHub][json-trim-github-badge]][json-trim-github-homepage] |
+| @auturge/json-trim | Copies a json file while trimming out undesired keys | [![Version][json-trim-npm-image]][json-trim-npm-url] | [![json-trim on GitHub][json-trim-github-badge]][json-trim-github-homepage] |
 
 
 ---
