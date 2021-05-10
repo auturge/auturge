@@ -10,6 +10,8 @@ A collection of helpful TypeScript/Javascript packages.
 
 [![License][mit-license-image]][mit-license]
 
+Click the colorful version flags to go to the corresponding webpage.
+
 | Package                  | Purpose                                                      |                             npm                                | Homepage                                                                                      |
 | :----------------------- | :----------------------------------------------------------- | :--------------------------------------------------------------: | :-------------------------------------------------------------------------------------------- |
 | @auturge         | Boilerplate/shared documentation for auturge projects |         N/A         | [![@auturge][auturge-github-badge]][auturge-github-homepage]                       |
