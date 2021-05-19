@@ -1,4 +1,4 @@
-# Contributing to Auturge
+# <h1 id="top" align="center">Contributing to Auturge</h1>
 
 We would love for you to contribute to this project and help make it even better than it is
 today! As a contributor, here are the guidelines we would like you to follow:
@@ -143,7 +143,7 @@ To ensure consistency throughout the source code, keep these rules in mind as yo
 -   All features or bug fixes **must be tested** by one or more specs (unit tests).
 -   All public API methods **must be documented**. (Details TBC).
 
-[auturge-dev-doc]: https://github.com/auturge/auturge/blob/master/docs/DEVELOPER.md
+[auturge-dev-doc]: https://github.com/auturge/auturge/blob/master/docs/DEVELOPER.md#top
 [github]: https://github.com/auturge/auturge
 [pulls-requests]: https://github.com/auturge/auturge/pulls/
 [github-new-issue]: https://github.com/auturge/auturge/issues/new

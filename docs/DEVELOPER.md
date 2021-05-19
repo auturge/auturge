@@ -1,4 +1,4 @@
-# Building and Testing Auturge Packages
+# <h1 id="top" align="center">Building and Testing Auturge Packages</h1>
 
 This document describes how to set up your development environment to build and test Auturge.
 It also explains the basic mechanics of using `git`, `node`, and `npm`.
@@ -86,4 +86,4 @@ You should execute all test suites before submitting a PR to GitHub:
 
 -   `npm run test`
 
-[contributing]: https://github.com/auturge/auturge/blob/master/docs/CONTRIBUTING.md
+[contributing]: https://github.com/auturge/auturge/blob/master/docs/CONTRIBUTING.md#top

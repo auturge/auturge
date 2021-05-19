@@ -1,4 +1,4 @@
-# <h1 align="center">auturge</h1>
+# <h1 id="top" align="center">auturge</h1>
 
 <p align="center">
 A collection of helpful TypeScript/Javascript packages.
@@ -27,8 +27,9 @@ Click the colorful version flags to go to the corresponding webpage.
 Want to file a bug, contribute some code, or improve documentation? Excellent! Read up on our
 guidelines for [contributing][contributing] and please consult and adhere to our [code of conduct][coc].
 
-[coc]: https://github.com/auturge/auturge/blob/master/docs/CODE_OF_CONDUCT.md
-[contributing]: https://github.com/auturge/auturge/blob/master/docs/CONTRIBUTING.md
+[coc]: https://github.com/auturge/auturge/blob/master/docs/CODE_OF_CONDUCT.md#top
+[contributing]: https://github.com/auturge/auturge/blob/master/docs/CONTRIBUTING.md#top
+
 [mit-license]: https://github.com/auturge/auturge/blob/master/LICENSE
 [mit-license-image]: http://img.shields.io/:license-mit-blue.svg?style=flat-square
 [mit-license-url]: http://mit-license.org
