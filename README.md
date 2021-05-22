@@ -12,10 +12,11 @@ A collection of helpful TypeScript/Javascript packages.
 
 Click the colorful version flags to go to the corresponding webpage.
 
-| Package                  | Purpose                                                      |                             npm                                | Homepage                                                                                      |
-| :----------------------- | :----------------------------------------------------------- | :--------------------------------------------------------------: | :-------------------------------------------------------------------------------------------- |
+| Package | Purpose  | npm  | Homepage |
+| :--- | :--- | :---: | :--- |
 | @auturge         | Boilerplate/shared documentation for auturge projects |         N/A         | [![@auturge][auturge-github-badge]][auturge-github-homepage]                       |
 | @auturge/config-resolver | Given a set of likely paths, locates and loads a config file | [![Version][config-resolver-npm-image]][config-resolver-npm-url] | [![config-resolver on GitHub][config-resolver-github-badge]][config-resolver-github-homepage] |
+| @auturge/expect-cwd | Terminates the process if the user is acting from the wrong working directory | [![Version][expect-cwd-npm-image]][expect-cwd-npm-url] | [![expect-cwd on GitHub][expect-cwd-github-badge]][expect-cwd-github-homepage] |
 | @auturge/json-trim | Copies a json file while trimming out undesired keys | [![Version][json-trim-npm-image]][json-trim-npm-url] | [![json-trim on GitHub][json-trim-github-badge]][json-trim-github-homepage] |
 | @auturge/logger | A handy multiplexing logger | [![Version][logger-npm-image]][logger-npm-url] | [![logger on GitHub][logger-github-badge]][logger-github-homepage] |
 | @auturge/testing         | Unit testing tools                                           |         [![Version][testing-npm-image]][testing-npm-url]         | [![@testing on GitHub][testing-github-badge]][testing-github-homepage]                        |
@@ -55,3 +56,8 @@ guidelines for [contributing][contributing] and please consult and adhere to our
 [testing-github-homepage]: https://github.com/auturge/testing
 [testing-npm-image]: https://img.shields.io/npm/v/@auturge/testing.svg
 [testing-npm-url]: https://www.npmjs.com/package/@auturge/testing
+
+[expect-cwd-github-badge]: https://img.shields.io/github/package-json/v/auturge/expect-cwd?label=GitHub
+[expect-cwd-github-homepage]: https://github.com/auturge/expect-cwd
+[expect-cwd-npm-image]: https://img.shields.io/npm/v/@auturge/expect-cwd.svg
+[expect-cwd-npm-url]: https://www.npmjs.com/package/@auturge/expect-cwd
